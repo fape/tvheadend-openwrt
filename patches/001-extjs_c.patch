@@ -1,0 +1,20 @@
+--- a/src/webui/extjs.c	2012-10-13 19:23:06.000000000 +0200
++++ b/src/webui/extjs.c	2012-10-13 19:26:37.964130477 +0200
+@@ -87,7 +87,7 @@ extjs_root(http_connection_t *hc, const
+ 
+   htsbuf_qprintf(hq, "<html>\n"
+ 		 "<script type=\"text/javascript\" src=\""EXTJSPATH"/adapter/ext/ext-base.js\"></script>\n"
+-		 "<script type=\"text/javascript\" src=\""EXTJSPATH"/ext-all-debug.js\"></script>\n"
++		 "<script type=\"text/javascript\" src=\""EXTJSPATH"/ext-all.js\"></script>\n"
+ 		 "<link rel=\"stylesheet\" type=\"text/css\" href=\""EXTJSPATH"/resources/css/ext-all.css\">\n"
+ 		 "<link rel=\"stylesheet\" type=\"text/css\" href=\"static/livegrid/resources/css/ext-ux-livegrid.css\">\n"
+ 		 "<link rel=\"stylesheet\" type=\"text/css\" href=\"static/app/ext.css\">\n");
+@@ -189,7 +189,7 @@ page_about(http_connection_t *hc, const
+ 		 "HTS Tvheadend %s"
+ 		 "</div><br>"
+ 		 "&copy; 2006 - 2012 Andreas \303\226man, et al.<br><br>"
+-		 "<img src=\"docresources/tvheadendlogo.png\"><br>"
++		 "<img src=\"static/img/tvheadendlogo.png\"><br>"
+ 		 "<a href=\"http://www.lonelycoder.com/tvheadend\">"
+ 		 "http://www.lonelycoder.com/tvheadend</a><br><br>"
+ 		 "Based on software from "

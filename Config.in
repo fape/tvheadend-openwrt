@@ -1,0 +1,9 @@
+config TVHEADEND_AVAHI_SUPPORT
+	bool "Avahi client support"
+	select PACKAGE_libavahi-client
+	default n
+
+
+#config TVHEADEND_BUNDLE
+#	bool "web gui"
+#	default y
