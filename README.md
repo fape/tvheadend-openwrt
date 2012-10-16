@@ -1,4 +1,6 @@
 tvheandend-openwrt
 ==================
 
-tvheadend for openwrt
+Tvheadend for OpenWrt
+
+Based on MediaWrt but more routerfriendly and newer.
