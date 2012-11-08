@@ -9,7 +9,7 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=tvheadend
 
-PKG_REV:=7367f713c1792637015f284d0e145cbd5c06335b
+PKG_REV:=03f7bc187bf9872c0582ccaebfa71b8348e1b780
 PKG_VERSION:=3.3
 PKG_RELEASE:=alpha
 
