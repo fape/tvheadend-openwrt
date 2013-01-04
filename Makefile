@@ -9,8 +9,8 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=tvheadend
 
-PKG_REV:=459bf3fd50604206806b63c0ab3d26c35fad28bd
-PKG_VERSION:=3.4
+PKG_REV:=9247faa7af042d8c37d8e8065c6389c62da7b66d
+PKG_VERSION:=3.3
 PKG_RELEASE:=alpha
 
 PKG_SOURCE_PROTO:=git
@@ -46,17 +46,34 @@ define Package/tvheadend/config
   endmenu
 endef
 
-ifneq ($(CONFIG_TVHEADEND_AVAHI_SUPPORT),)
-  CONFIGURE_ARGS+= --enable-avahi
-else
-  CONFIGURE_ARGS+= --disable-avahi
+ifeq ($(CONFIG_TVHEADEND_CWC_SUPPORT),)
+  CONFIGURE_ARGS += --disable-cwc
 endif
 
-#ifneq ($(CONFIG_TVHEADEND_AVAHI_SUPPORT),)
-#  CONFIGURE_ARGS+= --enable-bundle
-#else
-#  CONFIGURE_ARGS+= --disable-bundle
-#endif
+ifeq ($(CONFIG_TVHEADEND_V4L_SUPPORT),)
+  CONFIGURE_ARGS += --disable-v4l
+endif
+
+ifeq ($(CONFIG_TVHEADEND_LINUXDVB_SUPPORT),)
+  CONFIGURE_ARGS += --disable-linuxdvb
+endif
+
+ifeq ($(CONFIG_TVHEADEND_DVBSCAN_SUPPORT),)
+  CONFIGURE_ARGS += --disable-dvbscan
+endif
+
+ifeq ($(CONFIG_TVHEADEND_AVAHI_SUPPORT),)
+  CONFIGURE_ARGS += --disable-avahi
+else
+  CONFIGURE_ARGS += --enable-avahi
+endif
+
+ifeq ($(CONFIG_TVHEADEND_DVBCSA_SUPPORT),)
+  CONFIGURE_ARGS += --disable-dvbcsa
+else
+  CONFIGURE_ARGS += --enable-dvbcsa
+endif
+
 
 CONFIGURE_ARGS += \
 		--release \
