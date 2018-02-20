@@ -1,4 +1,6 @@
-[USE OFFICIAL VERISON OF TVHEADEND FOR OPENWRT](https://dev.openwrt.org/browser/packages/multimedia/tvheadend)
+# THIS IS ABANDONED USE OFFICIAL PACKAGE
+
+[USE OFFICIAL VERISON OF TVHEADEND FOR OPENWRT](https://openwrt.org/packages/pkgdata/tvheadend)
 
 tvheandend-openwrt
 ==================
